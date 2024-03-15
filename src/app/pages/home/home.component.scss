@@ -1,0 +1,85 @@
+.main-wrapper {
+  width: 100vw;
+  height: 100vh;
+
+  .container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 1.3rem;
+    height: 90%;
+    width: 100%;
+    padding: 3rem;
+
+    .card {
+      background-color: var(--card-color);
+      border-radius: 20px;
+      border: 1.3px solid var(--card-color);
+      transition: border 0.3s ease-in-out;
+
+      &:hover {
+        border: 1.3px solid var(--link-color);
+      }
+    }
+
+    .tableStates {
+      width: 50%;
+      height: 100%;
+
+      h1 {
+        background-color: transparent;
+        color: #fff;
+        padding: 1.2rem;
+      }
+
+      .table {
+        padding: 1.2rem;
+        background-color: transparent;
+
+        ::ng-deep .p-datatable th {
+          background-color: transparent !important; /* Remove o plano de fundo */
+          color: #fff; /* Cor do texto */
+          text-transform: uppercase !important;
+        }
+
+        ::ng-deep .p-datatable td {
+          background-color: transparent !important; /* Remove o plano de fundo */
+          color: #fff; /* Cor do texto */
+          font-weight: 200 !important;
+          padding: 0.5rem 0;
+        }
+      }
+    }
+
+    .moreInfo {
+      width: 50%;
+      height: 100%;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: 1fr 1fr;
+      gap: 1rem;
+
+      .infoBrazil {
+        position: relative;
+        h1 {
+          background-color: transparent;
+          color: #fff;
+          padding: 1.2rem;
+        }
+        .chart {
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -35%);
+          background-color: transparent;
+          width: 55%;
+
+          ::ng-deep canvas{
+            background-color: transparent !important; /* Remove o plano de fundo */
+          }
+        }
+      }
+    }
+  }
+}

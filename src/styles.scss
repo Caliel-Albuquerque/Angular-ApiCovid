@@ -1,1 +1,16 @@
 /* You can add global styles to this file, and also import other style files */
+@import "primeng/resources/primeng.css";
+@import "primeng/resources/themes/lara-light-blue/theme.css";
+
+:root {
+  --bg-color: #202124;
+  --card-color: #1a1a1d;
+  --link-color: #4ffa7b;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  background-color: var(--bg-color);
+}
