@@ -5,7 +5,8 @@
       <h1>Status Brasil por UF</h1>
 
       <div class="table">
-        <p-table [value]="states" [scrollable]="true" scrollHeight="620px" [tableStyle]="{ 'min-width': '50rem', 'padding': '1rem', 'background-color': '#202124'}">
+        <p-table [value]="states" [scrollable]="true" scrollHeight="620px"
+          [tableStyle]="{ 'min-width': '50rem', 'padding': '1rem'}">
           <ng-template pTemplate="header">
             <tr>
               <th>Estado</th>
@@ -33,9 +34,15 @@
       <div class="card infoBrazil">
         <h1>Dados Brasil</h1>
 
-        <div class="chart">
-          <p-chart type="pie" [data]="dataChart" [options]="chartOptions" [style]="{'width': '10% !important'}"></p-chart>
+        <div class="chartContainer">
+          <div class="chart">
+            <p-chart class="chartContent" type="pie" [data]="dataChart" [options]="chartOptions"
+              [style]="{'width': '10% !important'}"></p-chart>
+          </div>
+
+          <h4>Fonte: WHO</h4>
         </div>
+
       </div>
 
       <div class="card StateUser">
